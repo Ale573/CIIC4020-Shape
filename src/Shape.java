@@ -3,11 +3,11 @@ public class Shape<T>{
 	
 	public int sides;
 	
-	public double Area(T shape){
+	public double area(T shape){
 		return 0;
 	}
 	
-	public double Perimeter(T shape){
+	public double perimeter(T shape){
 		return 0;
 	}
 	
