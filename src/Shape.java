@@ -1,13 +1,21 @@
 
 public class Shape<T>{
+	public int b;
+	public int h;
 	
 	public int sides;
 	
-	public double area(T shape){
-		return 0;
+	private T shape;
+	
+	public void set(T t){
+		this.shape = t;
 	}
 	
-	public double perimeter(T shape){
+	public double area(){
+		return b*h;
+	}
+	
+	public double perimeter(){
 		return 0;
 	}
 	
