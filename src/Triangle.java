@@ -25,14 +25,14 @@ public class Triangle {
 	
 	public double getHeight(){ 
 		
-			double angle = Math.atan(c/a);
+			int angle = (int)Math.atan(c/a);
 			double height = angle * a;
 			return height;
 	}
 	
 	public boolean isATriangle(double a, double b, double c){
 		
-		if((a * a) + (b * b) == (c * c) || (a * a) + (c * c) == (b * b) || (b * b) + (c * c) == (a * a)){
+		if((a + b > c ) && (a + c > b) && (b + c > a)){
 			return true;			
 		}
 		return false;
