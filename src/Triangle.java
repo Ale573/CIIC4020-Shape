@@ -1,7 +1,6 @@
 
 public class Triangle {
 
-	private int sides = 3;
 	private double a;
 	private double b;
 	private double c;
@@ -25,9 +24,8 @@ public class Triangle {
 
 	public double getHeight(){ 
 
-		double number = ((a*a) + (b*b) - (c*c))/(2*a*b);
-		int angle = (int) Math.acos(number);
-		double height = Math.sin(angle) * b;
+		double number = ((a*a)+(b*b)-(c*c))/b;
+		double height = Math.sqrt((a*a) - (number * number));
 		return height;
 	}
 

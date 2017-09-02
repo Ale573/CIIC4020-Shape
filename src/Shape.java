@@ -7,19 +7,13 @@ public class Shape<T>{
 		this.shape = shape;
 	}
 	
-	public double getArea(int sides, double base, double height){
+	public T getShape(){
+		return shape;
+	}
+	
+	public double getArea(double base, double height){
 		
-		double area = 0;
-		
-		if(sides == 3){
-			area = 0.5 * base * height;
-		}
-		
-		else if(sides == 4){
-			area = base * height;
-		}
-		
-		return area;
+		return base * height;
 	}
 	
 	public double getPerimeter(double side1, double side2, double side3, double side4){
