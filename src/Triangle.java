@@ -6,16 +6,9 @@ public class Triangle {
 	private double c;
 
 	public Triangle(double a, double b, double c) throws Exception{
-
-		if(isATriangle(a, b, c)){
 			this.a = a;
 			this.b = b;
 			this.c = c;
-		}
-		else {
-			throw new Exception(" The data that you provide does not form a triangle.");
-		}
-
 	}
 
 	public double getBase(){
@@ -23,18 +16,32 @@ public class Triangle {
 	}
 
 	public double getHeight(){ 
-
-		double number = ((a*a)+(b*b)-(c*c))/b;
-		double height = Math.sqrt((a*a) - (number * number));
-		return height;
+		
+		if(isRectangle()){
+			return a;
+		}
+		
+		else {
+			double number = ((a*a)+(b*b)-(c*c))/(2*b);
+			double height = Math.sqrt((a*a) - (number * number));
+			return height;
+		}
 	}
 
-	public boolean isATriangle(double a, double b, double c){
+	public boolean isATriangle(){
 
 		if((a + b > c ) && (a + c > b) && (b + c > a)){
 			return true;			
 		}
 		return false;
 
+	}
+	
+	public boolean isRectangle(){
+		
+		if(a*a + b*b == c*c || a*a + c*c == b*b || b*b + c*c == a*a){
+			return true;
+		}
+		return false;
 	}
 }
